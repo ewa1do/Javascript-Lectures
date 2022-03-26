@@ -13,3 +13,15 @@
 - Asynchronouys code is **non-blocking** :+1:
 - Execution doesn't wait for an asynchronous taks to finish its work
 - Callback functions alone do **NOT** make code asynchronous
+
+### API: 
+
+**A**pplication **P**rogramming **I**nterface: Piece of software 
+that can be used by another piece of software, in order to allow
+**applications to talk to each other**.
+
+**"Online" API:** Application running on a server, that receives request
+for data, and sends data back as a response.
+
+We can build or own web APIs (requires back-end development, e.g with 
+node.js) or use a **3rd-party** APIs.
