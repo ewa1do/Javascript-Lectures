@@ -27,4 +27,4 @@ We can build or own web APIs (requires back-end development, e.g with
 node.js) or use a **3rd-party** APIs.
 
 
- ![What happens when we access a Web Server](/img/notes1.png)
+ ![What happens when we access a Web Server](https://github.com/ewa1do/Javascript-Lectures/blob/main/16%20-%20Asynchronous%20Javascript/img/notes1.png)
