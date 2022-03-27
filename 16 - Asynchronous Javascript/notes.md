@@ -27,4 +27,18 @@ We can build or own web APIs (requires back-end development, e.g with
 node.js) or use a **3rd-party** APIs.
 
 
- ![What happens when we access a Web Server](https://github.com/ewa1do/Javascript-Lectures/blob/main/16%20-%20Asynchronous%20Javascript/img/notes1.png)
+![What happens when we access a Web Server](https://github.com/ewa1do/Javascript-Lectures/blob/main/16%20-%20Asynchronous%20Javascript/img/notes1.png)
+
+### Promise
+
+**Promise:** An object that is used as a placeholder for the future result of and asynchronous operation.
+
+*Less formal* :arrow-down:
+**Promise:** A container for an asynchronously delivered true;
+
+*Less formal* :arrow-down:
+**Promise:** A container for a future value. 
+*Example:* Response from AJAX call :exclamation:
+
+
+![The promise Lifecycle](https://github.com/ewa1do/Javascript-Lectures/blob/main/16%20-%20Asynchronous%20Javascript/img/notes2.png)
