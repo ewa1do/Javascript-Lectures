@@ -25,3 +25,6 @@ for data, and sends data back as a response.
 
 We can build or own web APIs (requires back-end development, e.g with 
 node.js) or use a **3rd-party** APIs.
+
+
+ ![What happens when we access a Web Server](/img/notes1.png)
