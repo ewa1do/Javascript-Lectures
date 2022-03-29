@@ -192,37 +192,37 @@ const getJSON = function (url, errorMsg = 'Something went wrong') {
     });
 }
 
-const getCountryData = function (country) {
-    // Country 1
-    getJSON(
-        `https://restcountries.com/v3.1/name/${country}`, 
-        'Country not found'
-    )
-    .then (data => {
-        renderCountry(data[0]);
-        const neighbour = data[0].borders[0];
+// const getCountryData = function (country) {
+//     // Country 1
+//     getJSON(
+//         `https://restcountries.com/v3.1/name/${country}`, 
+//         'Country not found'
+//     )
+//     .then (data => {
+//         renderCountry(data[0]);
+//         const neighbour = data[0].borders[0];
         
-        if (!neighbour) throw new Error('No neighbour found!');
+//         if (!neighbour) throw new Error('No neighbour found!');
 
-        // Country 2
-        return getJSON(
-            `https://restcountries.com/v3.1/alpha/${neighbour}`, 
-            'Country not found'
-        )
-    })
-    .then (data2 => renderCountry(data2[0], 'neighbour'))
-    .catch (err => {
-        console.error(`${err} 🔥🔥🔥`);
-        renderError(`🔥🔥🔥 Something went wrong: ${err.message}. Try Again!`);
-    })
-    .finally (() => {
-        countriesContainer.style.opacity = 1;
-    })
-}
+//         // Country 2
+//         return getJSON(
+//             `https://restcountries.com/v3.1/alpha/${neighbour}`, 
+//             'Country not found'
+//         )
+//     })
+//     .then (data2 => renderCountry(data2[0], 'neighbour'))
+//     .catch (err => {
+//         console.error(`${err} 🔥🔥🔥`);
+//         renderError(`🔥🔥🔥 Something went wrong: ${err.message}. Try Again!`);
+//     })
+//     .finally (() => {
+//         countriesContainer.style.opacity = 1;
+//     })
+// }
 
-btn.addEventListener('click', function () {
-    getCountryData('venezuela');
-});
+// btn.addEventListener('click', function () {
+//     getCountryData('venezuela');
+// });
 
 ///////////////////////////////////////////////
 // Coding Challenge #1
@@ -265,8 +265,118 @@ TEST COORDINATES 2: 19.037, 72.873
 TEST COORDINATES 3: -33.933, 18.474
 */
 
-const whereAmI = function (lat, lng) {
-    fetch (`https://geocode.xyz/${lat},${lng}?geoit=json&auth=221622119368574280400x62654`)
+// const whereAmI = function (lat, lng) {
+//     fetch (`https://geocode.xyz/${lat},${lng}?geoit=json&auth=221622119368574280400x62654`)
+//     .then (response => {
+//         if (!response.ok) throw new Error(`Problem with Geocoding ${response.status}`);
+
+//         return response.json();
+//     })
+//     .then (data => {
+//         if (Object.keys(data).some(key => key === 'error'))
+//             throw new Error(`${data.error.description}`);
+
+//         return fetch (`https://restcountries.com/v3.1/name/${data.country}`)
+//     })
+//     .then (res => {
+//         if (!res.ok) throw new Error(`Country not found ${res.status}`)
+//         return res.json()
+//     })
+//     .then (data => {
+//         renderCountry(data[0]);
+//         const [neighbour] = data[0].borders;
+//         return fetch(`https://restcountries.com/v3.1/alpha/${neighbour}`);
+//     })
+//     .then (res => {
+//         if (!res.ok) throw new Error(`Country has no neighbour ${res.status}`);
+//         return res.json();
+//     })
+//     .then (data => renderCountry(data[0], 'neighbour'))
+//     .catch (err => {
+//         console.error(`🔥🔥🔥 Something went wrong: ${err}`);
+//         renderError(`🔥🔥🔥 Something went wrong: ${err}`);
+//     })
+//     // .finally (() => countriesContainer.style.opacity = 1);
+// }
+
+// whereAmI(52.508, 13.381);
+// whereAmI(19.037, 72.873);
+// whereAmI(-33.933, 18.474);
+// whereAmI(10.647,-71.617);
+// whereAmI(13.037, 72.873);
+
+
+// Building a Simple Promise
+
+// const lotteryPromise = new Promise(function (resolve, reject) {
+//     console.log('Lottery draw is happening 🔮');
+//     setTimeout(function () {
+//         if (Math.random() > 0.5) {
+//             resolve('You win 🤑🤑');
+//         } else {
+//             reject(new Error('You lost your money 💔'));
+//         }
+//     }, 2000);
+// });
+
+// lotteryPromise
+//     .then(res => console.log(res))
+//     .catch(err => console.error(err));
+
+
+// // Promisifying setTimeout
+// const wait = function (seconds) {
+//     return new Promise (function (resolve) {
+//         setTimeout (resolve, seconds * 1000);
+//     })
+// } 
+
+// wait(1)
+//     .then (() => {
+//         console.log('1 second passed');
+//         return wait(1);
+//     })
+//     .then (() => {
+//         console.log('2 seconds passed');
+//         return wait(1);
+//     })
+//     .then (() => {
+//         console.log('3 seconds passed');
+//         return wait(1);
+//     })
+//     .then (() => console.log('4 seconds passed'));
+
+
+// Promise.resolve('abc').then(x => console.log(x));
+// Promise.reject('xyz').catch(x => console.error(x));
+
+
+// Promisifying the Geolocation API
+
+// navigator.geolocation.getCurrentPosition(
+//     position => console.log(position),
+//     err => console.log(err)
+// );
+
+
+const getPosition = function () {
+    return new Promise (function (resolve, reject) {
+        // navigator.geolocation.getCurrentPosition(
+        //     position => resolve(position),
+        //     err => reject(err)
+        // );
+        return navigator.geolocation.getCurrentPosition(resolve, reject);
+    });
+}
+
+// getPosition().then(pos => console.log(pos));
+
+const whereAmI = function () {
+    getPosition()
+    .then(pos => {
+        const {latitude: lat, longitude: lng} = pos.coords;
+        return fetch (`https://geocode.xyz/${lat},${lng}?geoit=json&auth=221622119368574280400x62654`);
+    })
     .then (response => {
         if (!response.ok) throw new Error(`Problem with Geocoding ${response.status}`);
 
@@ -299,8 +409,4 @@ const whereAmI = function (lat, lng) {
     // .finally (() => countriesContainer.style.opacity = 1);
 }
 
-whereAmI(52.508, 13.381);
-// whereAmI(19.037, 72.873);
-// whereAmI(-33.933, 18.474);
-// whereAmI(10.647,-71.617);
-// whereAmI(13.037, 72.873);
+btn.addEventListener('click', whereAmI);
