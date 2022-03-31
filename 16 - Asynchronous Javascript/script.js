@@ -620,7 +620,6 @@ const whereAmI = async function () {
 // ]).then(res => console.log(res))
 // .catch(err => console.error(err));
 
-
 /////////////////////////////////////////////////////
 // Challenge #3
 
@@ -646,3 +645,73 @@ To test, turn off the 'loadNPause' function.
 
 */
 
+const imgDiv = document.querySelector('.images');
+let currentImg;
+
+const createImage = function (imgPath) {
+    return new Promise (function (resolve, reject) {
+        const img = document.createElement('img');
+        img.src = imgPath;
+
+        img.addEventListener('load', function () {
+            imgDiv.appendChild(img);
+            resolve(img);
+        })
+        // resolve(imgDiv.appendChild(img));
+
+        img.addEventListener('load', function () {
+            reject(new Error('Image not found'));
+        })
+    })
+
+} 
+
+const wait = (seconds) => {
+    return new Promise (resolve => {
+        setTimeout(resolve, seconds * 1000);
+    });
+}
+
+
+const loadNPause = async function () {
+    try {
+        let img = await createImage('img/img-1.jpg');
+        console.log('image 1 loaded')
+        console.log(img);
+
+        await wait(2);
+
+        img.style.display = 'none';
+        img = await createImage('img/img-2.jpg');
+        console.log('image 2 loaded')
+        
+        await wait(2)
+        
+        img.style.display = 'none';
+        img = await createImage('img/img-3.jpg');
+        console.log('image 3 loaded')
+    } catch (err) {
+        console.log(err);
+    }
+}
+// loadNPause();
+
+const loadAll = async function (imgArr) {
+    try {
+        // const imgs = imgArr.map(async function (img) {
+        //     const imgData = await createImage(img);
+        // })
+
+        const imgs = imgArr.map(async img => await createImage(img));
+
+        const imgsEl = await Promise.all(imgs);
+        console.log(imgsEl);
+
+        imgsEl.forEach(img => img.classList.add('parallel'))
+
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+loadAll(['img/img-1.jpg', 'img/img-2.jpg', 'img/img-3.jpg' ]);
