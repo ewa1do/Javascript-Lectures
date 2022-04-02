@@ -5,7 +5,7 @@
 // addToCart('apples', 2);
 // console.log(price, tq);
 
-console.log('Importing module');
+// console.log('Importing module');
 // console.log(shippingCost);
 
 // import everything
@@ -15,13 +15,13 @@ console.log('Importing module');
 
 // import add, { addToCart, totalPrice as price, tq } from './shoppingCart.js';
 // console.log(price);
-import add, { cart } from './shoppingCart.js';
+// import add, { cart } from './shoppingCart.js';
 
-add('pizza', 2);
-add('bread', 5);
-add('apples', 4);
+// add('pizza', 2);
+// add('bread', 5);
+// add('apples', 4);
 
-console.log(cart);
+// console.log(cart);
 
 // console.log('start fetching');
 // const res = await fetch('https://jsonplaceholder.typicode.com/posts');
@@ -84,10 +84,28 @@ console.log(cart);
 // CommonJs Modules --> Mostly used in NodeJS
 
 // Exporting
-export.addToCart =  function (product, quantity) {
-    cart.push({ product, quantity });
-    console.log(`${quantity} ${product} added to cart, (shipping cost is ${shippingCost})`);
-}    
+// export.addToCart =  function (product, quantity) {
+//     cart.push({ product, quantity });
+//     console.log(`${quantity} ${product} added to cart, (shipping cost is ${shippingCost})`);
+// }    
 
-// Importing
-const { addToCart } = require('./shoppingCart.js');
+// // Importing
+// const { addToCart } = require('./shoppingCart.js');
+
+import cloneDeep from '/node_modules/lodash-es/cloneDeep.js';
+
+const state = {
+    cart: [
+        { product: 'bread', quantity: 5},
+        { product: 'pizza', quantity: 5},
+    ],
+    user: { loggedIn: true },
+};
+
+const stateClone = Object.assign({}, state);
+const stateDeepClone = cloneDeep(state);
+
+state.user.loggedIn = false;
+console.log(stateClone);
+
+console.log(stateDeepClone);
