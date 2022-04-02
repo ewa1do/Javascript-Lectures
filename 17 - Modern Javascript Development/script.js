@@ -13,15 +13,16 @@
 
 // ShoppingCart.addToCart('bread', 5);
 
-// import add, { addToCart, totalPrice as price, tq } from './shoppingCart.js';
-// console.log(price);
-// import add, { cart } from './shoppingCart.js';
+import add, { addToCart, totalPrice as price, tq } from './shoppingCart.js';
+console.log(price);
+import add, { cart } from './shoppingCart.js';
 
-// add('pizza', 2);
-// add('bread', 5);
-// add('apples', 4);
+add('pizza', 2);
+add('bread', 5);
+add('apples', 4);
 
-// console.log(cart);
+console.log(cart);
+
 
 // console.log('start fetching');
 // const res = await fetch('https://jsonplaceholder.typicode.com/posts');
@@ -92,7 +93,11 @@
 // // Importing
 // const { addToCart } = require('./shoppingCart.js');
 
-import cloneDeep from '/node_modules/lodash-es/cloneDeep.js';
+//////////////////////////////////////////////
+// Introduction to NPM
+
+// import cloneDeep from '/node_modules/lodash-es/cloneDeep.js';
+import cloneDeep from 'lodash-es';
 
 const state = {
     cart: [
@@ -109,3 +114,12 @@ state.user.loggedIn = false;
 console.log(stateClone);
 
 console.log(stateDeepClone);
+
+// Buildingwith parcel and NPM Scripts
+// in the console: npx parcel index.html
+
+
+// This allows parcel to make a change without reload the entirely page (very useful)
+if (module.hot) {
+    module.hot.accept();
+}
