@@ -29,24 +29,54 @@ console.log(cart);
 // console.log(data);
 // console.log('end fetching');
 
-const getLastPost = async function () {
-    const res = await fetch('https://jsonplaceholder.typicode.com/posts');
-    const data = await res.json();
+// const getLastPost = async function () {
+//     const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+//     const data = await res.json();
     
-    // console.log(data);
-    // const lastPost = data[data.length - 1];
+//     // console.log(data);
+//     // const lastPost = data[data.length - 1];
     
-    return {
-        title: data.at(-1).title, 
-        text: data.at(-1).body
-    }
-}
+//     return {
+//         title: data.at(-1).title, 
+//         text: data.at(-1).body
+//     }
+// }
 
-const lastPost = getLastPost();
-console.log(lastPost);
+// const lastPost = getLastPost();
+// console.log(lastPost);
 
 // Not very clean
 // lastPost.then(last => console.log(last));
 
-const lastPost2 = await getLastPost();
-console.log(lastPost2);
+// const lastPost2 = await getLastPost();
+// console.log(lastPost2);
+
+// The module pattern
+const ShoppingCart2 = (function () {
+    const cart = [];
+    const shippingCost = 10;
+    const totalPrice = 237;
+    const totalQuantity = 23;
+
+    const addToCart = function (product, quantity) {
+        cart.push({ product, quantity });
+        console.log(`${quantity} ${product} added to cart, (shipping cost is ${shippingCost})`);
+    }
+
+    const orderStock = function (product, quantity) {
+        console.log(`${quantity} ${product} orderer from supplier`);
+    }
+
+    return {
+        addToCart,
+        cart,
+        totalPrice,
+        totalQuantity
+    }
+})();
+
+ShoppingCart2.addToCart('apple', 4);
+ShoppingCart2.addToCart('pizza', 2);
+console.log(ShoppingCart2);
+console.log(ShoppingCart2.shippingCost);
+
