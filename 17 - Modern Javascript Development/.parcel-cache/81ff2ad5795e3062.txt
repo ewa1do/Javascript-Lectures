@@ -1,4 +1,4 @@
-4821
+4823
 152C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\node_modules\caniuse-lite\data\features\css-initial-letter.js132933978569150645 0
 139C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\node_modules\svgo\lib\svgo\css-select-adapter.js132933978332311954 0
 131C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\node_modules\source-map\lib\array-set.js132933978098840942 0
@@ -32,7 +32,7 @@
 135C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\node_modules\caniuse-lite\data\regions\SB.js132933978829027477 0
 135C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\node_modules\lodash-es\_strictLastIndexOf.js132933959843120192 0
 156C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\node_modules\dom-serializer\node_modules\entities\lib\encode.d.ts132933978279140578 0
-95C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\dist132934004778787379 1
+95C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\dist132934625321870328 1
 156C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\node_modules\msgpackr-extract\prebuilds\linux-x64\node.abi72.node132933978444616485 0
 125C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\node_modules\lodash-es\valuesIn.js132933959897924758 0
 132C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\node_modules\@parcel\workers\lib\index.js132933978290096383 0
@@ -42,7 +42,7 @@
 136C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\node_modules\cosmiconfig\dist\ExplorerBase.js132933978016944860 0
 126C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\node_modules\@parcel\fs\src\find.js132933978152902387 0
 129C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\node_modules\svgo\plugins\prefixIds.js132933978438948709 0
-101C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\.gitignore132933802536332985 0
+101C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\.gitignore132934621976962287 0
 101C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\index.html132933987275916912 0
 118C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\node_modules\dotenv\LICENSE132933978084467613 0
 107C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\node_modules\nan132933978446495402 1
@@ -69,7 +69,7 @@
 135C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\node_modules\caniuse-lite\data\regions\SV.js132933978831326149 0
 143C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\node_modules\caniuse-lite\data\features\proximity.js132933978825799341 0
 122C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\node_modules\lodash-es\plant.js132933959868985233 0
-100C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\script.js132933996076443961 0
+100C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\script.js132934623807476300 0
 110C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\node_modules\dotenv132933978152922385 1
 132C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\node_modules\htmlnano\lib\presets\safe.js132933978344875880 0
 112C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\node_modules\msgpackr132933978307462186 1
@@ -1631,7 +1631,7 @@
 147C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\node_modules\@parcel\core\test\fixtures\config\.parcelrc132933978225464803 0
 128C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\node_modules\nth-check\lib\parse.d.ts132933978187700386 0
 135C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\node_modules\caniuse-lite\data\regions\BS.js132933978516607038 0
-113C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\dist\index.8cfc62b9.js132933996087227219 0
+113C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\dist\index.8cfc62b9.js132934623377216588 0
 132C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\node_modules\nth-check\lib\parse.d.ts.map132933978152892388 0
 134C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\node_modules\@parcel\runtime-service-worker132933978134945791 1
 127C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\node_modules\browserslist\error.d.ts132933978201682299 0
@@ -4818,5 +4818,7 @@
 117C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\node_modules\.bin\svgo.cmd132933978893825378 0
 117C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\node_modules\.bin\svgo.ps1132933978893825378 0
 117C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\dist\index.37259b65.js.map132934004778497143 0
-117C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\dist\index.8cfc62b9.js.map132933996087297202 0
-106C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\dist\index.html132934004778164835 0
+113C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\dist\index.87de57f7.js132934625321330639 0
+117C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\dist\index.87de57f7.js.map132934625321530546 0
+117C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\dist\index.8cfc62b9.js.map132934623377446485 0
+106C:\courses\Udemy\Jonas - Javascript\Javascript-Lectures\17 - Modern Javascript Development\dist\index.html132934625321330639 0
