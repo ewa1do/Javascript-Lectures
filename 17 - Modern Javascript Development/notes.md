@@ -38,6 +38,9 @@
 - Whenever possible, run promises in **parallel (Promise.all)**
 - Handle errors and promise rejections
 
+![screnshot 6](https://github.com/ewa1do/Javascript-Lectures/blob/main/17%20-%20Modern%20Javascript%20Development/screenshots/screen6.png)
+![screnshot 5](https://github.com/ewa1do/Javascript-Lectures/blob/main/17%20-%20Modern%20Javascript%20Development/screenshots/screen5.png)
+
 ![screnshot 1](https://github.com/ewa1do/Javascript-Lectures/blob/main/17%20-%20Modern%20Javascript%20Development/screenshots/screen1.png)
 
 ![screnshot 2](https://github.com/ewa1do/Javascript-Lectures/blob/main/17%20-%20Modern%20Javascript%20Development/screenshots/screen2.png)
