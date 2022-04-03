@@ -26,6 +26,18 @@
 - Implement method chaining
 - Do **not** use arrow functions as methods (in regular objects)
 
+### Avoid Nested Code
+- Use early **return** (guard clause)
+- Use ternary (conditional) or logical operators instead of **if**
+- Use multiple **if** instead of **if/else-if**
+- Avoid **for** loops, use array methods instead
+- Avoid callback-based asynchronous APIs
+
+### Asynchronous Code 
+- Consume promises with async/await for best readability
+- Whenever possible, run promises in **parallel (Promise.all)**
+- Handle errors and promise rejections
+
 
 
 ![screnshot 1](https://github.com/ewa1do/Javascript-Lectures/blob/main/17%20-%20Modern%20Javascript%20Development/screenshots/screen1.png)
