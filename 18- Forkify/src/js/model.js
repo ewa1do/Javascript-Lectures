@@ -69,7 +69,6 @@ export const getSearchResultsPage = function (page = state.search.page) {
 
 }
 
-
 export const updateServings = function (newServings) {
     state.recipe.ingredients.forEach(ing => {
         ing.quantity = ing.quantity * newServings / state.recipe.servings
@@ -79,12 +78,18 @@ export const updateServings = function (newServings) {
     state.recipe.servings = newServings;
 }
 
+const persisBookmarks = function () {
+    localStorage.setItem('bookmarks', JSON.stringify(state.bookmarks));
+}
+
 export const addBookmark = function (recipe) {
     // Add bookmark
     state.bookmarks.push(recipe);
 
     // Mark current recipe as bookmark
     if (recipe.id === state.recipe.id) state.recipe.bookmarked = true;
+
+    persisBookmarks();
 }
 
 export const deleteBookmark = function (id) {
@@ -94,5 +99,20 @@ export const deleteBookmark = function (id) {
 
     // Mark current recipe as NOT a bookmarked anymore
     if (id === state.bookmarks.id) state.recipe.bookmarked = false;
+
+    persisBookmarks();
 }
 
+const init = function () {
+    const storage = localStorage.getItem('bookmarks');
+    if (storage) state.bookmarks = JSON.parse(storage);
+
+}
+init();
+// console.log(state.bookmarks);
+
+const clearBookmarks = function () {
+    localStorage.clear('bookmarks');
+}
+
+// clearBookmarks();
